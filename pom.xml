@@ -13,17 +13,19 @@
   <description>A single-Maven-module project demonstrating problems with --enable-preview.</description>
 
   <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <compilerArgs>
-            <arg>--enable-preview</arg>
-          </compilerArgs>
-        </configuration>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <compilerArgs>
+              <arg>--enable-preview</arg>
+            </compilerArgs>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <properties>
